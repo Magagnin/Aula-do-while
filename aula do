@@ -1,0 +1,85 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <locale.h>
+int main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    srand(time(NULL));
+
+    int num, i, fat;
+    do{
+        printf("Informe numero:");
+        scanf("%d",&num);
+    }
+    while(num % 2 != 0);
+    fat = 1;
+    for(i=1; i<=num; i++){
+        fat *=i;
+   printf("\nFatoril de %d = %d", num, fat);
+    }
+
+    return 0 ;
+
+    }
+
+
+
+
+
+
+
+
+/*Escreva um programa em C para montar um menu de opções e executar cada
+uma das tarefas, conforme abaixo:
+1 – somar dois números
+2 – subtração de dois números
+3 – multiplicação de dois números
+4 – divisão de dois números
+5 - fim*/
+
+int a, b, opcao;
+do{
+       printf("1 – Adição\n"
+    "2 – Subtração\n"
+    "3 – Multiplicação\n"
+    "4 – Divisão\n");
+    printf("Escolha opção:");
+    scanf("%d", &opcao);
+    switch(opcao){
+    case 1:
+        printf("Informe prmeiro numero:");
+        scanf("%d", &a);
+        printf("Informe segundo numero:");
+        scanf("%d", &b);
+        printf("%d + %d = %d\n", a, b, a + b);
+        break;
+    case 2:
+        printf("Informe prmeiro numero:");
+        scanf("%d", &a);
+        printf("Informe segundo numero:");
+        scanf("%d", &b);
+        printf("%d - %d = %d\n", a, b, a  - b);
+        break;
+    case 3:
+        printf("Informe prmeiro numero:");
+        scanf("%d", &a);
+        printf("Informe segundo numero:");
+        scanf("%d", &b);
+        printf("%d * %d = %d\n", a , b, a * b);
+        break;
+    case 4:
+        printf("Informe prmeiro numero:");
+        scanf("%d", &a);
+        printf("Informe segundo numero:");
+        scanf("%d", &b);
+        printf("%d / %d = %d\n", a , b, a / b);
+        break;
+    case 5:
+        printf("Fimm\n");
+        break;
+}
+}while(opcao !=5);
+
+    return 0 ;
+    }
